@@ -1,3 +1,18 @@
+function displayDate()
+{
+    let date = new Date();
+    //console.log(date)
+    let dt = date.toString().split(" ")
+    //console.log(dt)
+    document.getElementById("date").innerHTML = dt[1] +" "+dt[2]+" "+ dt[3]
+}
+window.onload=function()
+{
+    displayDate();
+    displayItem();
+}
+
+
 $("#addTodo").click(function () {
     const inputTodo =$("input").val();
     $("#todolist").append("<li><input type='checkbox'>" + inputTodo + "</li>");
